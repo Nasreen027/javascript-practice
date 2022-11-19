@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <style>
+        td{
+            padding: 30px;
+        }
+        .main{
+            display: flex;
+           /* justify-content:space-evenly; */
+        }
+        .main1{
+            border: 1px solid black;
+            height: 300px;
+            width: 200px;
+            padding: 10px;
+        }
+        .ob{
+            font-size: 25px;
+            padding: 15px;
+        }
+        #ob{
+            font-size: 25px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="main1">
+        <label for="">Physics</label>
+        <input onclick="fun()" type="text" name="" id="inp1">
+        <br><br>
+        <input onclick="fun()" type="text" name="" id="inp2">
+        <br><br>
+        <input  onclick="fun()" type="text" name="" id="inp3">
+        <br><br>
+        <input  onclick="fun()" type="text" name="" id="inp4">
+        <br><br>
+        <input  onclick="fun()" type="text" name="" id="inp5">
+        <br><br>
+        <button  onclick="fun()" type="submit">Submit</button>
+    </div>
+    <table border="1">
+        <tr>
+            <td>Phy</td>
+            <td>100</td>
+            <td id="phy"></td>
+        </tr>
+        <tr>
+            <td>Chem</td>
+            <td>100</td>
+            <td id="chem"></td>
+        </tr>
+        <tr>
+            <td>Math</td>
+            <td>100</td>
+            <td id="math"></td>
+        </tr>
+        <tr>
+            <td>Eng</td>
+            <td>100</td>
+            <td id="eng"></td>
+        </tr>
+        <tr>
+            <td>Isl</td>
+            <td>100</td>
+            <td id="isl"></td>
+        </tr>
+    </table>
+</div>
+         <div class="ob">Obtain Marks: <span id="ob"></span></div>
+         <div  class="ob">Total Marks: <span  id="tm" >500</span></div>
+         <div class="ob" id="percent">Percentage:<span id="perc"></span></div>
+         <div class="ob" id="grade">Grade:<span id="gr"></span></div>
+    <script>
+        function fun(){
+            var phy = parseInt (document.getElementById("inp1").value);
+            var chem = parseInt(document.getElementById("inp2").value);
+            var math = parseInt(document.getElementById("inp3").value);
+            var eng = parseInt(document.getElementById("inp4").value);
+            var isl = parseInt(document.getElementById("inp5").value);
+
+            document.getElementById("phy").innerHTML = phy;
+            document.getElementById("chem").innerHTML = chem;
+            document.getElementById("math").innerHTML = math;
+            document.getElementById("eng").innerHTML = eng;
+            document.getElementById("isl").innerHTML = isl;
+
+           var obtain = document.getElementById("ob").innerHTML = (phy+chem+math+eng+isl);
+
+           var percentage = document.getElementById("perc").innerHTML = obtain/500*100+'%';
+
+           if(percentage>="80"){
+            document.getElementById("gr").innerHTML = "A+";
+            // document.getElementById("gr").innerHTML = " ";
+           }
+           else if(percentage>="70" && percentage<="80"){
+            document.getElementById("gr").innerHTML = " ";
+            document.getElementById("gr").innerHTML = "A";
+           }
+           else if(percentage>="60" && percentage<="70"){
+            document.getElementById("gr").innerHTML = " ";
+            document.getElementById("gr").innerHTML = "B";
+           }
+           else if(percentage>="50" && percentage<="60"){
+            document.getElementById("gr").innerHTML = " ";
+            document.getElementById("gr").innerHTML = "C";
+           }
+           else if(percentage>="40" && percentage<="50"){
+            document.getElementById("gr").innerHTML = " ";
+            document.getElementById("gr").innerHTML = "D";
+           }
+           else if(percentage<="40"){
+            document.getElementById("gr").innerHTML = " ";
+            document.getElementById("gr").innerHTML = "Fail";
+           }
+
+        
+
+            
+            
+
+
+
+
+        }
+    </script>
+</body>
+</html>

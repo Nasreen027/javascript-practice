@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .maincontainer{
+            height: 500px;
+            width: 400px;
+            background-color: gray;
+            display: block;
+            margin-left: 400px;
+            margin-top: 30px;
+            /* display: flex;
+            justify-content: center; */
+            border: 7px solid rgba(43, 40, 40, 0.698);
+            border-radius: 5px;
+            /* display: ;
+            align-items: center; */
+        }
+        .screen{
+            height: 100px;
+            width: 360px;
+            background-color:rgba(123, 191, 123, 0.741);
+            border-left: 10px solid black;
+            border-right: 10px solid black;
+            border-radius: 3px;
+            margin-top: 15px;
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .screeninner{
+            border: 3px solid black;
+            height: 85px;
+            width: 420px;
+            margin-top: 5px;
+        }
+        button{
+            height: 50px;
+            width: 400px;
+            margin-top: 10px;
+            /* background-color: white; */
+        }
+        .buttons1{
+            margin-left: 3px;
+            margin-top:30px;
+            display: flex;
+            justify-content:space-evenly;
+            overflow: hidden;
+        }
+        .b1{
+            padding: 10px;
+            width: 60px;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bolder;
+            /* background-color: black; */
+            color:black;
+            border-radius: 4px;
+        }
+        .del{
+            background-color:salmon;
+            color: white;
+        }
+        .add{
+            height: 130px;
+        }
+        .buttons2{
+             margin-top: -60px;
+        }
+        .space{
+            border: none;
+            width: 50px;
+            height: 7px;
+        }
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="maincontainer">
+            <div class="screen">
+                <div class="screeninner">
+                </div>
+            </div>
+            <div class="button">
+                <div class="buttons">
+                    <div class="buttons1">
+                    <button type="submit" onclick="7" class="b1">7</button>
+                    <button type="submit" onclick="7" class="b1">8</button>
+                    <button type="submit" onclick="7" class="b1">9</button>
+                    <button type="submit" onclick="7" class="b1">%</button>
+                    <button type="submit" onclick="7" class="b1">/</button>
+                </div>
+                <div class="buttons1">
+                    <button type="submit" onclick="7" class="b1">4</button>
+                    <button type="submit" onclick="7" class="b1">5</button>
+                    <button type="submit" onclick="7" class="b1">6</button>
+                    <button type="submit" onclick="7" class="b1">x</button>
+                    <button type="submit" onclick="7" class="b1">√</button>
+                </div>
+                <div class="buttons1">
+                    <button type="submit" onclick="7" class="b1">1</button>
+                    <button type="submit" onclick="7" class="b1">2</button>
+                    <button type="submit" onclick="7" class="b1">3</button>
+                    <button type="submit" onclick="7" class="b1 add">+</button>
+                    <button type="submit" onclick="7" class="b1">-</button>
+                </div>
+                <div class="buttons1 buttons2">
+                    <button type="submit" onclick="7" class="b1">0</button>
+                    <button type="submit" onclick="7" class="b1 del">Del</button>
+                    <button type="submit" onclick="7" class="b1">.</button>
+                    <button type="submit" onclick="7" class="b1 space"></button>
+                    <button type="submit" onclick="7" class="b1">=</button>
+                </div>
+            </div>
+                </div>
+
+   </div>
+</body>
+</html>

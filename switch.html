@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <label for="">Enter your Designation</label>
+    <br><br>
+    <input type="text" name="" id="des">
+    <br><br>
+    <button onclick="desig()" type="submit">Submit</button>
+    <br><br>
+    <div id="main"></div>
+
+    <script>
+
+        function desig(){
+            var designation = document.getElementById("des").value;
+
+            switch(designation){
+
+                case 'doctor':
+                    document.getElementById("main").innerHTML="Doctor's salary is 80000";
+
+                break;
+                case 'manager':
+                    document.getElementById("main").innerHTML= "Manager's salary is 40000";
+                    
+                break;
+                case 'professor':
+                    document.getElementById("main").innerHTML= "Professor's salary is 50000";
+
+                break;
+                default:
+
+                    document.getElementById.innerHTML= "Please Enter Valid Designation";
+
+                 break;
+            }
+
+        }
+    </script>
+
+    
+</body>
+</html>

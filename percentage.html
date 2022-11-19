@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage</title>
+</head>
+<body>
+    <label for="">Enter Percentage</label>
+    <br><br>
+    <input type="text" name="" id="inp">
+    <br><br>
+    <button onclick="perce()" type="submit">Submit</button>
+    <br><br>
+    <div id="main"></div>
+
+    <script>
+        function perce(){
+            var percent = document.getElementById("inp").value;
+            
+        if(percent>="80"){
+            document.getElementById("main").innerHTML = "A+";
+        }
+        else if (percent>="70"){
+            document.getElementById("main").innerHTML = " ";
+            document.getElementById("main").innerHTML = "A";
+        }
+        else if(percent>="60"){
+            document.getElementById("main").innerHTML = " ";
+            document.getElementById("main").innerHTML = "B";
+        }
+        else if(percent>="50"){
+            document.getElementById("main").innerHTML = " ";
+            document.getElementById("main").innerHTML = "C";
+        }
+        else if(percent>="40"){
+            document.getElementById("main").innerHTML = " ";
+            document.getElementById("main").innerHTML = "D";
+        }
+        else if(percent<="40"){
+            document.getElementById("main").innerHTML = " ";
+            document.getElementById("main").innerHTML = "Fail";
+        }
+
+    }
+    </script>
+</body>
+</html>

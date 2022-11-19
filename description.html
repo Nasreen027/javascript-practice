@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description</title>
+    <style>
+        .main{
+            height: 550px;
+            width: 650px;
+            border: 1px solid black;
+            position: relative;
+            left: 100px;
+            top: 80px;
+        }
+        .top{
+            height: 390px;
+            width: 650px;
+            /* border: 1px solid rebeccapurple; */
+        }
+        .a{
+            height: 130px;
+            width: 120px;
+            border: 1px solid black;
+            margin: 8px;
+            margin-left: 23px;
+        }
+        .mid{
+            display: flex;
+            padding: 10px;
+        }
+        .pr{
+            color: red;
+            font-weight: bolder;
+        }
+        .cart{
+            background-color:tomato;
+            color: white;
+            height: 20px;
+            width: 90px;
+            padding: 7px;
+            font-size: 17px;
+            font-weight: bolder;
+        }
+        .desc{
+            height: 550px;
+            width: 500px;
+            border: 1px dashed black;
+            padding: 15px;
+            /* margin: 10px; */
+            position:relative;
+            left: 670px;
+            top: -560px;
+        }
+        p{
+            text-align: justify;
+        }
+        h1{
+            text-align: center;
+            color: white;
+            padding: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border-radius: 10px;
+        }
+        .chanel{
+            background-color:rgb(227, 155, 21);
+        }
+        .dream{
+            background-color:plum;
+        }
+        .kay{
+            background-color:maroon;
+        }
+        .rose{
+            background-color:indianred;
+        }
+        .n{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="top"><img id="abc" src="images/chanel.jpg" alt="perfume" on="ab(this.src)" height="390px" width="650px"></div>
+        <div class="mid">
+            <div class="a"><img src="images/chanel.jpg" alt="" onclick="ab(this.src)" height="130px" width="120px"></div>
+            <div class="a"><img src="images/dream.jpg" alt="" onclick="cd(this.src)" height="130px" width="120px"></div>
+            <div class="a"><img src="images/kay ali.webp" alt="" onclick="ef(this.src)" height="130px" width="120px"></div>
+            <div class="a"><img src="images/rose essence.png" alt="" onclick="gh(this.src)" height="130px" width="120px"></div>
+        </div>
+        <div class="desc n" id="n1">
+            <h1 class="chanel">CHANEL</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum praesentium recusandae sint, totam ab vel aliquam possimus quisquam ea laboriosam nulla,
+                 corrupti placeat voluptatibus dolorum rem assumenda voluptatem facilis pariatur!</p>
+                 <p class="pr">Rs.2400</p>
+                 <div class="cart">Add to cart</div>
+        </div>
+        <div class="desc n" id="n2">
+            <h1 class="dream">DREAM WOMEN</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum praesentium recusandae sint, totam ab vel aliquam possimus quisquam ea laboriosam nulla,
+                 corrupti placeat voluptatibus dolorum rem assumenda voluptatem facilis pariatur!</p>
+                 <p class="pr">Rs.1800</p>
+                 <div class="cart">Add to cart</div>
+        </div>
+        <div class="desc n" id="n3">
+            <h1 class="kay">KAY ALI</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum praesentium recusandae sint, totam ab vel aliquam possimus quisquam ea laboriosam nulla,
+                 corrupti placeat voluptatibus dolorum rem assumenda voluptatem facilis pariatur!</p>
+                 <p class="pr">Rs.2500</p>
+                 <div class="cart">Add to cart</div>
+        </div>
+        <div class="desc n" id="n4">
+            <h1 class="rose">ROSE ESSENCE</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum praesentium recusandae sint, totam ab vel aliquam possimus quisquam ea laboriosam nulla,
+                 corrupti placeat voluptatibus dolorum rem assumenda voluptatem facilis pariatur!</p>
+                 <p class="pr">Rs.2000</p>
+                 <div class="cart">Add to cart</div>
+        </div>
+    </div>
+    <script>
+        function ab(a){
+            document.getElementById("abc").src = a;
+            document.getElementById("n1").style.display = 'block';
+            document.getElementById("n2").style.display = 'none';
+            document.getElementById("n3").style.display = 'none';
+            document.getElementById("n4").style.display = 'none';
+        }
+         function cd(a){
+            document.getElementById("abc").src = a;
+            document.getElementById("n2").style.display = 'block';  
+            document.getElementById("n1").style.display = 'none'; 
+            document.getElementById("n3").style.display = 'none';
+            document.getElementById("n4").style.display = 'none';
+        }
+        function ef(a){
+            document.getElementById("abc").src = a;
+            document.getElementById("n3").style.display = 'block';
+            document.getElementById("n1").style.display = 'none';
+            document.getElementById("n2").style.display = 'none';
+            document.getElementById("n4").style.display = 'none';
+        }
+        function gh(a){
+            document.getElementById("abc").src = a;
+            document.getElementById("n4").style.display = 'block';
+            document.getElementById("n1").style.display = 'none';
+            document.getElementById("n2").style.display = 'none';
+            document.getElementById("n3").style.display = 'none';
+        }
+    </script>
+</body>
+</html>

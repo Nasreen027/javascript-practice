@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <label for="">Enter Your Percentage:</label>
+    <br><br>
+    <input type="text" name="" id="inp">
+    <br><br>
+    <button onclick="fun()" type="submit">Submit</button>
+    <br><br>
+    <div id="main"></div>
+
+    <script>
+        function fun(){
+            var per = document.getElementById("inp").value;
+
+            switch (true){
+
+                case(per>=80):
+                document.getElementById("main").innerHTML = "A+";
+
+                break;
+                case(per>=70):
+                document.getElementById("main").innerHTML = "A";
+
+                break;
+                case(per>=60):
+                document.getElementById("main").innerHTML = "B";
+
+                break;
+                case(per>=50):
+                document.getElementById("main").innerHTML = "C";
+
+                break;
+                case(per>=40):
+                document.getElementById("main").innerHTML = "D";
+
+                break;
+                default:
+                document.getElementById("main").innerHTML = "Fail";
+
+
+            }
+
+
+
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+    <style>
+        #s_n{
+            color: red;
+        }
+        #s_e{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+   <label for="">Name</label>
+   <input type="text" name="" id="n"> 
+   <br><br>
+   <span id="s_n"></span>
+   <br><br>
+   <label for="">Email</label>
+   <input type="text" name="" id="e">
+   <br><br>
+   <span id="s_e"></span>
+   <br><br>
+   <button type="submit" onclick="abc()">Submit</button> 
+   <br><br>
+   <div  id="main"></div>
+
+   <script>
+    function abc(){
+         var name= document.getElementById("n").value;
+         var email=document.getElementById("e").value;
+
+    if(name=="iman" && email=="iman@gmail.com"){
+          document.getElementById("main").innerHTML = "welcome"+" "+  name;
+          document.getElementById("s_n").innerHTML = " ";
+          document.getElementById("s_e").innerHTML = " ";
+
+
+    }
+    else if(name!="iman" && email=="iman@gmail.com"){
+        document.getElementById("s_n").innerHTML = "Invalid name";
+        document.getElementById("s_e").innerHTML = " ";
+        document.getElementById("main").innerHTML = " ";
+    }
+    else if(name=="iman" && email!="iman@gmail.com"){
+        document.getElementById("s_e").innerHTML = "Invalid email address";
+        document.getElementById("s_n").innerHTML = " ";
+        document.getElementById("main").innerHTML = " ";
+    }
+    else if(name!="iman" && email!="iman@gmail.com"){
+        document.getElementById("s_n").innerHTML = "Invalid name";
+        document.getElementById("s_e").innerHTML = "Invalid email address";
+        document.getElementById("main").innerHTML = " ";
+    }
+    // else{
+    //     document.getElementById("main").innerHTML = "email or name is incorrect";
+    // }
+    }
+   </script>
+</body>
+</html>
