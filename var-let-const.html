@@ -52,8 +52,8 @@
         //  outside the function it will not work
         //  var is not block scope it can be called out of the block
         // var variable has global scope when it is called outside the function means it can be called anywhere
-         console.log(name);
-         var name = "iman";
+        //  console.log(name);
+        //  var name = "iman";
 
         // let
     //   function fun(){
@@ -85,6 +85,74 @@
     // }
     // fun();
 //  const is also block scope it cannot be called outside the block
+
+
+//   Block Scope
+
+    //  {  var name = "iman"
+    //     let age = 20;
+    //     const email = "iman@gmail.com"
+      
+    // }
+    // console.log(name);[output]
+    // console.log(age);[error]
+    // console.log(email);[error]
+
+    // Functional Scope
+    // function fun(){
+    //     var name = "iman";
+    //     let age = 20;
+    //     const email = "iman@gmail.com";
+    // }
+    // fun();
+    // console.log(name);[error]
+    // console.log(age);[error]
+    // console.log(email);[error]
+
+
+    // Global Scope
+
+    // var name = "iman";
+    // let age = 20;
+    // const email = "iman@gmail.com";
+
+    // function fun(){
+    //     console.log(name);
+    //     console.log(age);
+    //     console.log(email);
+
+    // }
+    // fun();
+
+    // console.log(name);
+    // console.log(email);
+    // console.log(age);
+
+
+    // Reassign values
+    // var name = "iman";
+    // let age = 20;
+    // const email = "iman@gmail.com";
+
+    // name = "fiza";
+    // age = 17;
+    // email = "fiza@gmail.com";
+
+    // console.log(name);
+    // console.log(age);
+    // console.log(email);
+    // We can't reassign the value of const
+
+    // const blog = "https://www.youtube.com/";
+    // blog = {};
+    // console.log(blog);
+ var name;
+ let age;
+ console.log(name);
+
+
+
+
 
 
 
