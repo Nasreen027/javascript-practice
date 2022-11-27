@@ -7,20 +7,81 @@
     <title>Functions</title>
 </head>
 <body>
+    <div id="main">
+
+    </div>
+    <button onclick="this.style.color='red';this.style.display='none'">Remove</button>
     <script>
         // function fun(p1,p2){
         //    return p1*p2;
         // }
         // console.log(fun(12,2));
 
-        console.log(myfun(3,4));
-        function myfun(a,b){
-          return a*b;
+        // console.log(myfun(3,4));
+        // function myfun(a,b){
+        //   return a*b;
+        // }
+        // function fun1(x,y){
+        //     return(5/9)*(x-32);
+        // }
+        // console.log(fun1(77));
+
+        
+        // function fun(x,y){
+        // return x*y;
+        // }
+        // console.log(fun(2,5));
+
+        // const person = {
+        //     name:"iman",
+        //     age:"20",
+        //     email:"iman@gmail.com",
+        //     nage : function(){
+        //         return this.name + this.age;
+        //     }
+        // }
+        // console.log(person.nage());
+
+        // let x = this;
+        // console.log(this);
+
+        // function fun(){
+        //     return this;
+        // }
+        // console.log(fun());
+
+        // const per = {
+        //     pers : function(city,country){
+        //         return this.name + ' ' + this.age + city + country;
+        //     }
+        // }
+        // const per1 = {
+        //     name : "iman",
+        //     age : "20",
+        // }
+        // const per2 = {
+        //     name : "fiza",
+        //     age : "17",
+        // }
+        // // console.log(per.pers.call(per2,"Karachi","Pakistan"));
+        // document.getElementById("main").innerHTML = per.pers.apply(per2,["Karachi","Pakistan"]);
+
+        // console.log(Math.max.apply(" ",[21,26,29]));
+
+        per1 = {
+            name : "iman",
+            age : "20",
+            nage : function(){
+                return this.name + ' ' + this.age;
+            }
         }
-        function fun1(x,y){
-            return(5/9)*(x-32);
+        per2 = {
+            name : "fiza",
+            age : "17",
         }
-        console.log(fun1(77));
+        let nage = per1.nage.bind(per2);
+        document.getElementById("main").innerHTML = nage();
+
 
     </script>
 </body>
