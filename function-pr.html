@@ -8,9 +8,11 @@
 </head>
 <body>
     <div id="main">
-
+  <input type="text" name="" id="n">
+  <input type="text" name="" id="a">
+  <button type="submit" onclick="handleClick()">Submit</button>
     </div>
-    <button onclick="this.style.color='red';this.style.display='none'">Remove</button>
+    <!-- <button onclick="this.style.color='red';this.style.display='none'">Remove</button> -->
     <script>
         // function fun(p1,p2){
         //    return p1*p2;
@@ -68,19 +70,52 @@
 
         // console.log(Math.max.apply(" ",[21,26,29]));
 
-        per1 = {
-            name : "iman",
-            age : "20",
-            nage : function(){
-                return this.name + ' ' + this.age;
-            }
+        // per1 = {
+        //     name : "iman",
+        //     age : "20",
+        //     nage : function(){
+        //         // return this.name + ' ' + this.age;
+        //         let x = document.getElementById("main").innerHTML=this.name + ' ' + this.age;
+        //         x.innerHTML = this.name + ' ' + this.age;
+        //     }
+        // }
+        // // per1.nage();
+        // let y = per1.nage.bind(per1);
+        // setTimeout(nage,5000);
+        // per2 = {
+        //     name : "fiza",
+        //     age : "17",
+        // }
+        // let nage = per1.nage.bind(per2);
+        // document.getElementById("main").innerHTML = nage();
+
+    //    if(true){
+    //     x = 23;
+    //    }
+    //  if(name=="iman",age==20){
+    //     return "welcome iman";
+    //  }
+    //  else{
+    //     return "Information is not valid";
+    //  }
+ 
+    function fun(name,age){
+        // let name = "iman";
+        // let age = "20";
+        if(name == "iman"&& age == "20"){
+            return "welcome iman";
         }
-        per2 = {
-            name : "fiza",
-            age : "17",
+        else{
+            return "information is invalid";
         }
-        let nage = per1.nage.bind(per2);
-        document.getElementById("main").innerHTML = nage();
+    }
+    console.log(fun());
+
+    function handleClick(){
+        const name = document.querySelector("#n");
+        const age = document.querySelector("#a");
+        fun(name,age);
+    }
 
 
     </script>
